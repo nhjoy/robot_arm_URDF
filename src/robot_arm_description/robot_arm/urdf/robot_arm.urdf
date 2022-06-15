@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="Robot_Arm">
+  name="robot_arm">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.0104259249124962 -0.0048536572277758 0.0432744746088849"
+        xyz="-0.010426 -0.0048537 0.043274"
         rpy="0 0 0" />
       <mass
-        value="0.0725564097125622" />
+        value="0.072556" />
       <inertia
-        ixx="1.84434778729453E-05"
-        ixy="6.73538682758001E-12"
-        ixz="-2.3959547324024E-08"
-        iyy="4.18895782173143E-05"
-        iyz="6.4075366139781E-08"
-        izz="3.97742050247117E-05" />
+        ixx="1.8443E-05"
+        ixy="6.7354E-12"
+        ixz="-2.396E-08"
+        iyy="4.189E-05"
+        iyz="6.4075E-08"
+        izz="3.9774E-05" />
     </inertial>
     <visual>
       <origin
@@ -26,12 +26,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/base_link.STL" />
+          filename="package://robot_arm/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -40,25 +40,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/base_link.STL" />
+          filename="package://robot_arm/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
   <link
-    name="Link1">
+    name="link1">
     <inertial>
       <origin
-        xyz="0.0420622615308821 -0.00592880515232835 -0.0256843612112551"
+        xyz="0.042062 -0.0059288 -0.025684"
         rpy="0 0 0" />
       <mass
-        value="0.207180993005197" />
+        value="0.20718" />
       <inertia
-        ixx="0.000374708377115792"
-        ixy="2.05992772371561E-05"
-        ixz="-4.73438905207625E-06"
-        iyy="0.00103137138329276"
-        iyz="1.23389452660578E-05"
-        izz="0.000780498008648986" />
+        ixx="0.00037471"
+        ixy="2.0599E-05"
+        ixz="-4.7344E-06"
+        iyy="0.0010314"
+        iyz="1.2339E-05"
+        izz="0.0007805" />
     </inertial>
     <visual>
       <origin
@@ -66,12 +66,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link1.STL" />
+          filename="package://robot_arm/meshes/link1.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -80,12 +80,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link1.STL" />
+          filename="package://robot_arm/meshes/link1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint1"
+    name="joint1"
     type="revolute">
     <origin
       xyz="0 0 0.09255"
@@ -93,7 +93,7 @@
     <parent
       link="base_link" />
     <child
-      link="Link1" />
+      link="link1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -103,20 +103,20 @@
       velocity="0" />
   </joint>
   <link
-    name="Link2">
+    name="link2">
     <inertial>
       <origin
-        xyz="0.0514999999999985 -1.70002900645727E-15 -0.0265000000000009"
+        xyz="0.0515 -2.1441E-15 -0.0265"
         rpy="0 0 0" />
       <mass
-        value="0.0150579864214192" />
+        value="0.015058" />
       <inertia
-        ixx="8.03838158687281E-06"
-        ixy="-1.73378605295587E-20"
-        ixz="7.37479334416483E-23"
-        iyy="1.22131883719689E-05"
-        iyz="-4.29407072392088E-22"
-        izz="5.65715727925143E-06" />
+        ixx="8.0384E-06"
+        ixy="-1.9457E-20"
+        ixz="7.779E-21"
+        iyy="1.2213E-05"
+        iyz="3.2781E-21"
+        izz="5.6572E-06" />
     </inertial>
     <visual>
       <origin
@@ -124,12 +124,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link2.STL" />
+          filename="package://robot_arm/meshes/link2.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -138,20 +138,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link2.STL" />
+          filename="package://robot_arm/meshes/link2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint2"
+    name="joint2"
     type="revolute">
     <origin
       xyz="0.0108 -0.03605 0.019"
       rpy="1.5708 0 0" />
     <parent
-      link="Link1" />
+      link="link1" />
     <child
-      link="Link2" />
+      link="link2" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -161,20 +161,20 @@
       velocity="0" />
   </joint>
   <link
-    name="Link3">
+    name="link3">
     <inertial>
       <origin
-        xyz="0.022728048874843 -0.000679561249228244 0.0253101496525927"
+        xyz="0.022728 -0.00067956 0.02531"
         rpy="0 0 0" />
       <mass
-        value="0.0411732267600477" />
+        value="0.041173" />
       <inertia
-        ixx="8.89417969716542E-06"
-        ixy="-9.8479551916094E-08"
-        ixz="-2.39595473238911E-08"
-        iyy="1.45118250069406E-05"
-        iyz="-6.40753661397687E-08"
-        izz="8.75387222329412E-06" />
+        ixx="8.8942E-06"
+        ixy="-9.848E-08"
+        ixz="-2.396E-08"
+        iyy="1.4512E-05"
+        iyz="-6.4075E-08"
+        izz="8.7539E-06" />
     </inertial>
     <visual>
       <origin
@@ -182,12 +182,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link3.STL" />
+          filename="package://robot_arm/meshes/link3.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -196,20 +196,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link3.STL" />
+          filename="package://robot_arm/meshes/link3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint3"
+    name="joint3"
     type="revolute">
     <origin
       xyz="0.103 0 -0.053"
       rpy="0 0 -1.5708" />
     <parent
-      link="Link2" />
+      link="link2" />
     <child
-      link="Link3" />
+      link="link3" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -219,20 +219,20 @@
       velocity="0" />
   </joint>
   <link
-    name="Link4">
+    name="link4">
     <inertial>
       <origin
-        xyz="-0.000683553147996951 0.00978890206482536 -0.0263024391761712"
+        xyz="-0.00068355 0.0097889 -0.026302"
         rpy="0 0 0" />
       <mass
-        value="0.0316676572660873" />
+        value="0.031668" />
       <inertia
-        ixx="8.06071840594677E-06"
-        ixy="-6.73538676296777E-12"
-        ixz="6.40753661397883E-08"
-        iyy="4.64305606634161E-06"
-        iyz="2.39595473238741E-08"
-        izz="5.55403753556937E-06" />
+        ixx="8.0607E-06"
+        ixy="-6.7354E-12"
+        ixz="6.4075E-08"
+        iyy="4.6431E-06"
+        iyz="2.396E-08"
+        izz="5.554E-06" />
     </inertial>
     <visual>
       <origin
@@ -240,12 +240,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link4.STL" />
+          filename="package://robot_arm/meshes/link4.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+          rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
     <collision>
@@ -254,20 +254,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/Link4.STL" />
+          filename="package://robot_arm/meshes/link4.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Joint4"
+    name="joint4"
     type="revolute">
     <origin
       xyz="0.0978 0.0015 -0.00095"
       rpy="3.1416 0 -1.5708" />
     <parent
-      link="Link3" />
+      link="link3" />
     <child
-      link="Link4" />
+      link="link4" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -277,20 +277,20 @@
       velocity="0" />
   </joint>
   <link
-    name="GripL">
+    name="left_finger">
     <inertial>
       <origin
-        xyz="0.00436302017417017 0.00422927185214711 -0.0157504632594223"
+        xyz="0.004363 0.0042293 -0.01575"
         rpy="0 0 0" />
       <mass
-        value="0.0184570467495853" />
+        value="0.018457" />
       <inertia
-        ixx="4.15319001962167E-06"
-        ixy="1.18608250402742E-07"
-        ixz="-2.47307712977721E-10"
-        iyy="7.40764663567909E-06"
-        iyz="-1.46937845773757E-10"
-        izz="4.63330776046162E-06" />
+        ixx="4.1532E-06"
+        ixy="1.1861E-07"
+        ixz="-2.4731E-10"
+        iyy="7.4076E-06"
+        iyz="-1.4694E-10"
+        izz="4.6333E-06" />
     </inertial>
     <visual>
       <origin
@@ -298,12 +298,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/GripL.STL" />
+          filename="package://robot_arm/meshes/left_finger.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -312,22 +312,22 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/GripL.STL" />
+          filename="package://robot_arm/meshes/left_finger.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Grip_Joint1"
+    name="grip_joint1"
     type="prismatic">
     <origin
       xyz="-0.06744 0.036228 0.0065437"
       rpy="1.5708 0 3.1416" />
     <parent
-      link="Link4" />
+      link="link4" />
     <child
-      link="GripL" />
+      link="left_finger" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       lower="0"
       upper="0"
@@ -335,20 +335,20 @@
       velocity="0" />
   </joint>
   <link
-    name="GripR">
+    name="right_finger">
     <inertial>
       <origin
-        xyz="0.00436302017417026 -0.00422927185215562 -0.0157495367405776"
+        xyz="0.004363 -0.0042293 -0.01575"
         rpy="0 0 0" />
       <mass
-        value="0.0184570467495853" />
+        value="0.018457" />
       <inertia
-        ixx="4.15319001962167E-06"
-        ixy="-1.18608250402786E-07"
-        ixz="2.47307712971134E-10"
-        iyy="7.40764663567908E-06"
-        iyz="-1.46937845773272E-10"
-        izz="4.6333077604616E-06" />
+        ixx="4.1532E-06"
+        ixy="-1.1861E-07"
+        ixz="2.4731E-10"
+        iyy="7.4076E-06"
+        iyz="-1.4694E-10"
+        izz="4.6333E-06" />
     </inertial>
     <visual>
       <origin
@@ -356,12 +356,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/GripR.STL" />
+          filename="package://robot_arm/meshes/right_finger.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -370,22 +370,22 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/GripR.STL" />
+          filename="package://robot_arm/meshes/right_finger.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Grip_Joint2"
+    name="grip_joint2"
     type="prismatic">
     <origin
       xyz="-0.06744 0.036138 -0.065096"
-      rpy="1.5708 0 -3.1416" />
+      rpy="1.5708 0 3.1416" />
     <parent
-      link="Link4" />
+      link="link4" />
     <child
-      link="GripR" />
+      link="right_finger" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
       lower="0"
       upper="0"
@@ -393,20 +393,20 @@
       velocity="0" />
   </joint>
   <link
-    name="End-Effector">
+    name="end_effector">
     <inertial>
       <origin
-        xyz="-0.0164822426429336 -1.61803310824715E-06 -0.00648665413103859"
+        xyz="-0.016482 -1.618E-06 -0.0064867"
         rpy="0 0 0" />
       <mass
-        value="0.0577947757867498" />
+        value="0.057795" />
       <inertia
-        ixx="3.05532861900538E-05"
-        ixy="2.57952437843824E-13"
-        ixz="-4.671829172981E-07"
-        iyy="1.4019553678633E-05"
-        iyz="-2.54038789153586E-08"
-        izz="2.4228055409743E-05" />
+        ixx="3.0553E-05"
+        ixy="2.5795E-13"
+        ixz="-4.6718E-07"
+        iyy="1.402E-05"
+        iyz="-2.5404E-08"
+        izz="2.4228E-05" />
     </inertial>
     <visual>
       <origin
@@ -414,12 +414,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/End-Effector.STL" />
+          filename="package://robot_arm/meshes/end_effector.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -428,20 +428,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_Arm/meshes/End-Effector.STL" />
+          filename="package://robot_arm/meshes/end_effector.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="End-Joint"
+    name="end-joint"
     type="fixed">
     <origin
       xyz="-0.05286 0.019218 -0.029276"
       rpy="1.5708 0 -3.1416" />
     <parent
-      link="Link4" />
+      link="link4" />
     <child
-      link="End-Effector" />
+      link="end_effector" />
     <axis
       xyz="0 0 0" />
   </joint>
